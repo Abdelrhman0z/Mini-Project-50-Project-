@@ -7,6 +7,8 @@
   --right-btn-hover-color: rgba(28, 122, 28, 1);
   --hover-width: 75%;
   --other-width: 25%;
+  --left-bg-opacity: rgba(87, 84, 236, 0.5);
+  --right-bg-opacity: rgba(43, 43, 43, 0.6);
 }
 * {
   box-sizing: border-box;
@@ -118,4 +120,30 @@ h1 {
 
 .hover-right .left {
   width: var(--other-width);
+}
+
+/* HOVER OPACITY EFEECT */
+.hover-left .split.left::before {
+  background-color: var(--left-bg-opacity);
+}
+
+.hover-right .split.right::before {
+  background-color: var(--right-bg-opacity);
+}
+
+/* Media Query */
+@media (max-width: 800px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    width: 10rem;
+  }
+}
+
+@media (max-height: 700px) {
+  .btn {
+    top: 70%;
+  }
 }
