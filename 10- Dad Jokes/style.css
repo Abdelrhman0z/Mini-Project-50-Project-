@@ -53,3 +53,9 @@ h3 {
 .btn:active {
   transform: scale(0.98);
 }
+
+.btn:disabled {
+  background: #cfadf5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
