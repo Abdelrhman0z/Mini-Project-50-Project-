@@ -10,6 +10,7 @@ textarea.addEventListener('keyup', (e) => {
   if (e.key === 'Enter') {
     setTimeout(() => {
       e.target.value = ''
+      textarea.disabled = true
     }, 10)
     randomSelect()
   }
@@ -48,6 +49,7 @@ function randomSelect() {
     setTimeout(() => {
       const randomTag = pickRandomTag()
       highlightTag(randomTag)
+      textarea.disabled = false
     }, 100)
   }, times * 100)
 }
