@@ -7,7 +7,7 @@ textarea.focus()
 textarea.addEventListener('keyup', (e) => {
   createTags(e.target.value)
 
-  if (e.key === 'Enter') {
+  if (e.key === 'Enter' && tags.childElementCount !== 0) {
     setTimeout(() => {
       e.target.value = ''
       textarea.disabled = true
