@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: steelblue; */
+  background-image: url("./Minecraft-PS4-Wallpapers-16.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  margin: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.empty {
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+  border: #000 3px solid;
+  background-color: transparent;
+}
+
+.fill {
+  background-image: url("https://yt3.ggpht.com/_DiGCcjGwJQAZ3zmlyB8TCYuA8O9tDJ9zGNysq5sR0rxwYb6SP5fW8cb3LbfcRwfui0m27oIhA=s900-c-k-c0x00ffffff-no-rj");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 145px;
+  width: 145px;
+  cursor: pointer;
+}
+.hold {
+  border: #ccc 5px solid;
+}
+
+.hovered {
+  background-color: #777;
+  border-color: #fff;
+  border-style: inset;
+}
+
+@media (max-width: 800px) {
+  body {
+    flex-direction: column;
+  }
+}
