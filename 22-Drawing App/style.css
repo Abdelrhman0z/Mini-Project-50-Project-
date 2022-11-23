@@ -50,3 +50,7 @@ canvas {
 .toolbox > *:last-child {
   margin-top: auto;
 }
+
+button:active {
+  scale: 0.9;
+}
