@@ -12,6 +12,7 @@ isPressed = false
 let color = 'black'
 let x
 let y
+let increaseSize = 5
 
 canvas.addEventListener('mousedown', (e) => {
   isPressed = true
@@ -28,16 +29,14 @@ document.addEventListener('mouseup', (e) => {
 })
 
 canvas.addEventListener('mousemove', (e) => {
-  if (isPressed) {
-    const x2 = e.offsetX
-    const y2 = e.offsetY
+  if (!isPressed) return
+  const x2 = e.offsetX
+  const y2 = e.offsetY
 
-    drawCircle(x2, y2)
-    drawLine(x, y, x2, y2)
-
-    x = x2
-    y = y2
-  }
+  drawCircle(x2, y2)
+  drawLine(x, y, x2, y2)
+  x = x2
+  y = y2
 })
 
 function drawCircle(x, y) {
@@ -61,17 +60,16 @@ function updateSizeOnScreen() {
 }
 
 increaseBtn.addEventListener('click', () => {
-  size += 5
+  size += increaseSize
 
   if (size > 50) {
     size = 50
   }
-
   updateSizeOnScreen()
 })
 
 decreaseBtn.addEventListener('click', () => {
-  size -= 5
+  size -= increaseSize
   if (size < 5) {
     size = 5
   }
