@@ -1,18 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  background: #ecf0f1;
+  background-color: #ecf0f1;
   font-family: "Roboto", sans-serif;
   display: flex;
-  margin: 0;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
+  margin: 0;
 }
 
 img {
@@ -67,7 +67,7 @@ img {
   flex-direction: column;
   justify-content: space-around;
   margin-left: 10px;
-  width: 160px;
+  width: 100px;
 }
 
 .author-info small {
@@ -83,7 +83,6 @@ img {
     #f6f7f8 20%,
     #f6f7f8 100%
   );
-
   background-size: 200% 100%;
   animation: bgPos 1s linear infinite;
 }
