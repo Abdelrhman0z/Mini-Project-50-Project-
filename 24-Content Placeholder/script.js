@@ -2,7 +2,7 @@ const header = document.getElementById('header')
 const title = document.getElementById('title')
 const excerpt = document.getElementById('excerpt')
 const profileImg = document.getElementById('profile_img')
-const namee = document.getElementById('name')
+const name = document.getElementById('name')
 const email = document.getElementById('email')
 
 const animatedBgs = document.querySelectorAll('.animated-bg')
@@ -24,7 +24,7 @@ function getData() {
 async function fetchData() {
   const res = await fetch('https://jsonplaceholder.typicode.com/todos/1/users')
   const data = await res.json()
-  namee.textContent = data[7].name
+  name.textContent = data[7].name
   email.textContent = data[7].email
   title.textContent = data[7].company.name
   excerpt.textContent = data[7].company.bs
