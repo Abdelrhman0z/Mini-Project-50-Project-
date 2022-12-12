@@ -1,4 +1,3 @@
-const sliderContainer = document.querySelector('.slider-container')
 const slideLeft = document.querySelector('.left-slide')
 const slideRight = document.querySelector('.right-slide')
 const upButton = document.querySelector('.up-button')
