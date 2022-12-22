@@ -6,6 +6,7 @@ const main = document.getElementById('main')
 
 async function getUser(username) {
   try {
+    search.disabled = true
     const { data } = await axios(ApiUrl + username)
 
     createUserCard(data)
@@ -15,6 +16,7 @@ async function getUser(username) {
       createErrorCard('No profile with this username')
     }
   }
+  search.disabled = false
 }
 
 async function getRepos(username) {
