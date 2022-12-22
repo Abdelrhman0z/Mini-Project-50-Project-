@@ -41,7 +41,7 @@ function createUserCard(user) {
    <div class="user-info">
      <h2>${user.name}</h2>
      <p>
-       ${user.bio}
+       ${user.bio == null ? "Bio is not available for this user" : user.bio}
      </p>
 
      <ul>
