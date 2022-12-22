@@ -10,13 +10,16 @@ async function getUser(username) {
     const { data } = await axios(ApiUrl + username)
 
     createUserCard(data)
-    getRepos(username)
+    await getRepos(username)
   } catch (err) {
     if (err.response.status == 404) {
       createErrorCard('No profile with this username')
     }
+    else {
+      createErrorCard('Somethig Went Wrong , Please Try Again Later')
+    }
   }
-  search.disabled = false
+  finally { search.disabled = false }
 }
 
 async function getRepos(username) {
