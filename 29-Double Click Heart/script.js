@@ -3,11 +3,9 @@ const times = document.querySelector('#times')
 
 let timeClicked = 0
 
-loveMe.addEventListener('dblclick', (e) => {
-  createHeart(e)
-})
+loveMe.addEventListener('dblclick', createHeart)
 
-const createHeart = (e) => {
+function createHeart(e) {
   const heart = document.createElement('i')
   heart.classList.add('fas')
   heart.classList.add('fa-heart')
