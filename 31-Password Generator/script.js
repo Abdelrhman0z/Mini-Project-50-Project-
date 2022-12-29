@@ -14,6 +14,12 @@ const randomFunc = {
   symbol: getRandomSymbol
 }
 
+clipboardEl.addEventListener("click", () => {
+  const password = resultEl.innerText;
+  navigator.clipboard.writeText(password);
+  alert('Password Copied To Clipboard')
+});
+
 generateEl.addEventListener('click', () => {
   const length = +lengthEl.value
   const hasLower = lowercaseEl.checked
@@ -38,7 +44,6 @@ function generatePassword(lower, upper, number, symbol, length) {
   }
 
   const finalPassword = generatedPassword.slice(0, length)
-
   return finalPassword
 }
 
