@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
 
 * {
   box-sizing: border-box;
@@ -8,25 +8,42 @@
 body {
   background-color: #3b3b98;
   color: #fff;
-  font-family: "Muli", sans-serif;
+  font-family: "Lora", sans-serif;
   display: flex;
-  padding: 10px;
+  /* padding: 10px; */
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
   overflow: hidden;
+  background-image: url("https://images3.alphacoders.com/649/649328.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: -1;
 }
 
 /* Container */
 .container {
-  background-color: #23235b;
-  box-shadow: 0px 2px 10px rgba(255, 255, 255, 0.2);
+  background-color: rgba(23, 78, 5, 0.37);
+  box-shadow: 0px 2px 10px rgba(5, 212, 67, 0.2);
   padding: 20px;
+  border-radius: 30px;
 }
 
 h2 {
-  margin: 10px 0 20px;
+  margin: 0 auto;
   text-align: center;
   padding: 20px;
   width: 350px;
@@ -45,6 +62,7 @@ h2 {
   padding: 12px 10px;
   height: 50px;
   width: 100%;
+  border-radius: 10px;
 }
 
 .result-container #result {
@@ -59,6 +77,7 @@ h2 {
   width: 40px;
   height: 40px;
   font-size: 20px;
+  border-radius: 10px;
 }
 
 /* Setting */
@@ -66,13 +85,13 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 15px 0;
+  margin: 10px 0;
 }
 
 /* Buttons */
 .btn {
   border: none;
-  background-color: #3b3b98;
+  background-color: rgb(17, 184, 17);
   color: #fff;
   font-size: 16px;
   padding: 8px 12px;
@@ -82,4 +101,94 @@ h2 {
 .btn-large {
   display: block;
   width: 100%;
+  border-radius: 30px;
+  padding: 20px;
+  letter-spacing: 3px;
+  font-family: inherit;
+}
+
+.btn-large:active {
+  scale: 0.9;
+}
+
+/* Togle Container */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  width: 200px;
+  margin: 10px 0;
+}
+
+/* Toggle */
+.toggle {
+  visibility: hidden;
+}
+
+.toggle:checked + .label {
+  background-color: rgb(17, 184, 17);
+}
+
+.toggle:checked + .label .ball {
+  animation: slideOn 0.3s linear forwards;
+}
+
+/* Laabel */
+.label {
+  background-color: #d0d0d0;
+  width: 90px;
+  height: 30px;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  margin: 0 15px 0;
+  position: relative;
+  margin-left: 100px;
+}
+
+.ball {
+  background-color: #fff;
+  height: 24px;
+  width: 24px;
+  border-radius: 50%;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  animation: slideOff 0.3s linear forwards;
+}
+
+@keyframes slideOn {
+  0% {
+    transform: translateX(0) scale(1);
+  }
+  50% {
+    transform: translateX(20px) scale(1.2);
+  }
+  100% {
+    transform: translateX(40px) scale(1);
+  }
+}
+
+@keyframes slideOff {
+  0% {
+    transform: translateX(40px) scale(1);
+  }
+  50% {
+    transform: translateX(20px) scale(1.2);
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+input[type="number"] {
+  width: 70px;
+  text-align: center;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  margin-right: 13px;
+}
+
+input[type="number"]:focus {
+  outline: none;
 }
