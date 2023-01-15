@@ -33,8 +33,8 @@ generateEl.addEventListener('click', () => {
 function generatePassword(lower, upper, number, symbol, length) {
   let generatedPassword = ''
   const typesCount = lower + upper + number + symbol
-  const typesArr = [{ lower }, { upper }, { number }, { symbol }].filter(item => Object.values(item)[0])
   if (typesCount === 0) { return '' }
+  const typesArr = [{ lower }, { upper }, { number }, { symbol }].filter(item => Object.values(item)[0])
 
   for (let i = 0; i < length; i += typesCount) {
     typesArr.forEach(type => {
@@ -47,16 +47,22 @@ function generatePassword(lower, upper, number, symbol, length) {
   return finalPassword
 }
 
+const ASCII_CAPITAL_A = 65;
+const ASCII_SMALL_A = 97;
+const ASCII_ZERO = 48;
+const ALPHABET_LENGTH = 26;
+const SINGE_DIGITS_LENGTH = 10;
+
 function getRandomLower() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 97)
+  return String.fromCharCode(Math.floor(Math.random() * ALPHABET_LENGTH) + ASCII_SMALL_A)
 }
 
 function getRandomUpper() {
-  return String.fromCharCode(Math.floor(Math.random() * 26) + 65)
+  return String.fromCharCode(Math.floor(Math.random() * ALPHABET_LENGTH) + ASCII_CAPITAL_A)
 }
 
 function getRandomNumber() {
-  return String.fromCharCode(Math.floor(Math.random() * 10) + 48)
+  return String.fromCharCode(Math.floor(Math.random() * SINGE_DIGITS_LENGTH) + ASCII_ZERO)
 }
 
 function getRandomSymbol() {
