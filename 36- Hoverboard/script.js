@@ -1,6 +1,7 @@
 const container = document.getElementById('container')
 const colors = ['#e74c3c', '#8e44ad', '#3498db', '#e67e22', '#2ecc71']
 const squares = 500
+const toggle = document.querySelector('.toggle')
 
 for (let i = 0; i < squares; i++) {
   const square = document.createElement('div')
@@ -19,10 +20,23 @@ function setColor(element) {
 }
 
 function removeColor(element) {
-  element.style.backgroundColor = '#1d1d1d'
+  element.style.backgroundColor = 'var(--third-color)'
   element.style.boxShadow = '0 0 2px #000'
 }
 
 function getRandomColor() {
   return colors[Math.floor(Math.random() * colors.length)]
 }
+
+
+toggle.addEventListener('click', (e) => {
+  const html = document.querySelector('html')
+  if (html.classList.contains('dark')) {
+    html.classList.remove('dark')
+    e.target.innerHTML = 'Dark mode'
+  }
+  else {
+    html.classList.add('dark')
+    e.target.innerHTML = 'Light mode'
+  }
+})

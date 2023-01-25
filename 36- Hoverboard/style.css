@@ -2,8 +2,29 @@
   box-sizing: border-box;
 }
 
+:root {
+  --primary-color: #fff;
+  --secondary-color: #111;
+  --third-color: #bdc3c7;
+}
+
+html {
+  transition: background 0.5s ease-in;
+}
+
+html.dark {
+  --primary-color: #111;
+  --secondary-color: #fff;
+  --third-color: #1d1d1d;
+}
+
+html.dark {
+  background-color: #000;
+  color: var(--primary-color);
+}
+
 body {
-  background-color: #111;
+  background-color: var(--primary-color);
   display: flex;
   margin: 0;
   align-items: center;
@@ -21,7 +42,7 @@ body {
 }
 
 .square {
-  background-color: #1d1d1d;
+  background-color: var(--third-color);
   box-shadow: 0 0 2px #000;
   height: 16px;
   width: 16px;
@@ -31,4 +52,15 @@ body {
 
 .square:hover {
   transition-duration: 0s;
+}
+
+.toggle {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  position: absolute;
+  top: 100px;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
 }
