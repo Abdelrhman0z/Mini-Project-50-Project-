@@ -1,7 +1,7 @@
-const boxes = document.getElementById('boxes')
-const btn = document.getElementById('btn')
+const boxes = document.getElementById('boxes');
+const btn = document.getElementById('btn');
 
-function createBoxes() {
+(function createBoxes() {
   for (let i = 0; i < 4; i++) {
     for (let j = 0; j < 4; j++) {
       const box = document.createElement('div')
@@ -10,8 +10,6 @@ function createBoxes() {
       boxes.appendChild(box)
     }
   }
-}
-
-createBoxes()
+})();
 
 btn.addEventListener('click', () => boxes.classList.toggle('big'))
