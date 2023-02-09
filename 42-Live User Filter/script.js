@@ -14,7 +14,7 @@ async function getData() {
   // Clear result
   result.innerHTML = ''
 
-  // Loop Throue The Results
+  // Loop Through The Results
   results.forEach((user) => {
     const li = document.createElement('li')
 
