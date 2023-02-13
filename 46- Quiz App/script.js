@@ -50,13 +50,13 @@ loadQuiz()
 
 function loadQuiz() {
   deselectAnswers()
-  const currentQuizData = quizData[currentQuiz]
+  const { question, a, b, c, d } = quizData[currentQuiz]
 
-  questionEl.innerText = currentQuizData.question
-  aText.innerText = currentQuizData.a
-  bText.innerText = currentQuizData.b
-  cText.innerText = currentQuizData.c
-  dText.innerText = currentQuizData.d
+  questionEl.innerText = question
+  aText.innerText = a
+  bText.innerText = b
+  cText.innerText = c
+  dText.innerText = d
 }
 
 function deselectAnswers() {
