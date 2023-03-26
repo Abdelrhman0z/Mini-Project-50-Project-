@@ -31,7 +31,7 @@ const projects = [
     title: 'Blurry Loading',
     description: ' A Count Down Blurry Loading From 100% to 0% ',
     imageUrl: './img/05.PNG',
-    link: './Projects/05-Blurry_Loading/index.html',
+    link: './Projects/05-Bluury_Loading/index.html',
     number: '05'
   },
   {
@@ -66,7 +66,7 @@ const projects = [
     title: 'Dad Joke',
     description: 'Button Every Time You Click It Fetch A Different Joke',
     imageUrl: './img/10.PNG',
-    link: './Projects/10-Dad_Joke/index.html',
+    link: './Projects/10-Dad_Jokes/index.html',
     number: '10'
   },
   {
@@ -283,7 +283,7 @@ const projects = [
     title: 'Verify Account Ui',
     description: 'Input With 6 Boxes To Enter A verification number (Design Only)',
     imageUrl: './img/41.PNG',
-    link: './Projects/41-Verify_Account_Ui/index.html',
+    link: './Projects/41-Verify_Account Ui/index.html',
     number: '41'
   },
   {
@@ -311,7 +311,7 @@ const projects = [
     title: 'Netflix Navigation',
     description: 'Navigate Between The Menus With Smooth Animation',
     imageUrl: './img/45.PNG',
-    link: './Projects/45-Netflix_Range_Slider/index.html',
+    link: './Projects/45-Netflix_Navigation/index.html',
     number: '45'
   },
   {
